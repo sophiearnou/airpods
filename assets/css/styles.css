@@ -1,0 +1,363 @@
+/*===== GOOGLE FONTS =====*/
+
+
+/*===== GOOGLE FONTS =====*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*========== BASE ==========*/
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*========== HEADER ==========*/
+
+.l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #FBFEFD;
+}
+
+
+/*========== NAV ==========*/
+
+.nav {
+    max-width: 1024px;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #707070;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color: #FBFEFD;
+        transition: .4s;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+        border-radius: 0 0 1rem 1rem;
+        z-index: 100;
+    }
+}
+
+.nav__item {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.nav__link,
+.logo .nav__toggle {
+    color: #707070;
+    font-weight: 500;
+}
+
+.nav__logo:hover {
+    color: #ff54a2;
+}
+
+.nav__link {
+    transition: .3s;
+}
+
+.nav__link:hover {
+    color: #ff54a2;
+}
+
+.nav__toggle {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.bx {
+    width: 30px;
+    height: auto;
+}
+
+
+/* Show menu */
+
+.show-menu {
+    top: 3rem;
+}
+
+
+/* Active menu */
+
+.active-link {
+    color: #707070;
+}
+
+
+/* Change background header */
+
+.scroll-header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+
+/* Scroll top */
+
+.scrolltop {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background: rgba(6, 156, 84, .5);
+    border-radius: .4rem;
+    z-index: 10;
+    transition: .4s;
+    visibility: hidden;
+}
+
+.scrolltop:hover {
+    background-color: var(--first-color-alt);
+}
+
+.scrolltop__icon {
+    font-size: 1.8rem;
+    color: #FBFEFD;
+}
+
+
+/* Show scrolltop */
+
+.show-scroll {
+    visibility: visible;
+    bottom: 1.5rem;
+}
+
+
+/*========== CONTENT ==========*/
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-1 h2 {
+    font-size: 54px;
+    transform: translateX(10%);
+    transition: 1s ease-in-out;
+}
+
+.col-1 h2:hover {
+    transform: translateX(0);
+}
+
+.col-1 h3 {
+    font-size: 30px;
+    color: #707070;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.col-1 p {
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+
+.col-1 h4 {
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+button {
+    width: 180px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+button:hover {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.col-1::after {
+    content: "";
+    width: 10px;
+    height: 50%;
+    background: #12c2e9;
+    background: linear-gradient(#ff469f, #ff6062);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+.col-2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.col-2 .airpods {
+    width: 90%;
+}
+
+.color-box {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#ff54a2, #ff575a);
+    border-radius: 20px 0 0 20px;
+    z-index: -1;
+    transform: translateX(150px);
+}
+
+.add-btn img {
+    width: 35px;
+    margin-bottom: 5px;
+}
+
+.add-btn {
+    text-align: center;
+    color: #fff;
+}
+
+
+/* ========== ANIMATION ========== */
+
+
+/* .left-to-right {
+    transform: translateX(150%);
+    transition: 1s ease-in-out;
+} */
+
+
+/*========== SOCIAL-LINKS ==========*/
+
+.solcial-links img {
+    height: 13px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.solcial-links {
+    text-align: center;
+}
+
+
+/*========== MEDIA ==========*/
+
+@media only screen and (max-width:700px) {
+    .row {
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    .color-box {
+        width: 120%;
+    }
+    .col-2 {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .col-2 .airpods {
+        width: 77%;
+    }
+    .col-1 {
+        flex-basis: 100%;
+    }
+    .col-1 h2 {
+        font-size: 35px;
+    }
+    .col-1 h3 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        margin: 0;
+    }
+    .nav {
+        height: calc(3rem + 1.5rem);
+    }
+    .nav__list {
+        display: flex;
+    }
+    .nav__item {
+        margin-left: 2.5rem;
+        margin-bottom: 0;
+    }
+    .nav__toggle {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .bd-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
